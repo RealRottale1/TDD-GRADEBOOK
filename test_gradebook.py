@@ -9,5 +9,14 @@ from gradebook import letterGrade
     (50, "F")
 ])
 
-def test_ticket_tiers(grade, expected):
+def test_letterGrade(grade, expected):
     assert letterGrade(grade) == expected
+
+@pytest.mark.parametrize("grade, expected", [
+    (90, True),
+    (60, True),
+    (50, False)
+])
+
+def test_isPassing(grade, expected):
+    assert isPassing(grade) == expected
