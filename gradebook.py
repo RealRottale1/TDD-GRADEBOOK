@@ -13,6 +13,8 @@ def isPassing(score):
     return (score > 59)
 
 def average(scores):
+    if len(scores) == 0:
+        return 0
     return sum(scores)/len(scores)
 
 def curved_score(score, bonus):
