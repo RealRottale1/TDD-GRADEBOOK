@@ -20,3 +20,12 @@ def test_letterGrade(grade, expected):
 
 def test_isPassing(grade, expected):
     assert isPassing(grade) == expected
+
+@pytest.mark.parametrize("grades, expected", [
+    ([90, 90, 90], 90),
+    ([100, 50], 75),
+    ([], 0),
+])
+
+def test_average(grades, expected):
+    assert average(grades) == expected
