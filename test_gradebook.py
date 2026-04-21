@@ -9,4 +9,4 @@ from gradebook import letterGrade
 ])
 
 def test_ticket_tiers(grade, expected):
-    assert letterGrade(code) == expected
+    assert letterGrade(grade) == expected
