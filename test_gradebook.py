@@ -1,5 +1,5 @@
 import pytest
-from gradebook import letterGrade
+from gradebook import letterGrade, isPassing, average, curved_score
 
 @pytest.mark.parametrize("grade, expected", [
     (90, "A"),
