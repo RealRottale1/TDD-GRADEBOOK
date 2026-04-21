@@ -29,3 +29,12 @@ def test_isPassing(grade, expected):
 
 def test_average(grades, expected):
     assert average(grades) == expected
+
+@pytest.mark.parametrize("score, bonus, expected", [
+    (90, 11, 100),
+    (0, 101, 100),
+    (25, 25, 50),
+])
+
+def test_curved_score(score, bonus, expected):
+    assert curved_score(score, bonus) == expected
