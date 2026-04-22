@@ -26,7 +26,7 @@ def average(scores):
     return sum(scores)/len(scores)
 
 def curved_score(score, bonus):
-    newScore = score + bonus
+    newScore = score + max(bonus, 0)
     if newScore < 100:
         return newScore
     else:
