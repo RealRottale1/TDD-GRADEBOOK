@@ -29,7 +29,6 @@ def test_isPassing_invalidType():
     with pytest.raises(TypeError):
         isPassing("92")
 
-
 @pytest.mark.parametrize("grades, expected", [
     ([90, 90, 90], 90),
     ([100, 50], 75),
@@ -38,6 +37,10 @@ def test_isPassing_invalidType():
 
 def test_average(grades, expected):
     assert average(grades) == expected
+
+def test_average_invalidType():
+    with pytest.raises(TypeError):
+        average(92)
 
 @pytest.mark.parametrize("score, bonus, expected", [
     (90, 11, 100),
