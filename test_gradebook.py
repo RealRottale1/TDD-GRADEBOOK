@@ -25,6 +25,11 @@ def test_letterGrade_invalidType():
 def test_isPassing(grade, expected):
     assert isPassing(grade) == expected
 
+def test_isPassing_invalidType():
+    with pytest.raises(TypeError):
+        isPassing("92")
+
+
 @pytest.mark.parametrize("grades, expected", [
     ([90, 90, 90], 90),
     ([100, 50], 75),

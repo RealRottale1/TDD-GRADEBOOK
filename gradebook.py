@@ -12,6 +12,8 @@ def letterGrade(score):
     return "F"
 
 def isPassing(score):
+    if not (type(score) is int):
+        raise TypeError
     return (score > 59)
 
 def average(scores):
