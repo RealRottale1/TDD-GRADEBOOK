@@ -19,7 +19,7 @@ def isPassing(score):
 def average(scores):
     if not (type(scores) is list):
         raise TypeError
-    if not all(type(scores) is int):
+    if not all(type(s)for s in scores):
         raise TypeError
     if len(scores) == 0:
         return 0
