@@ -12,6 +12,10 @@ from gradebook import letterGrade, isPassing, average, curved_score
 def test_letterGrade(grade, expected):
     assert letterGrade(grade) == expected
 
+def test_letterGrade_invalidType():
+    with pytest.raises(TypeError):
+        letterGrade("92")
+
 @pytest.mark.parametrize("grade, expected", [
     (90, True),
     (60, True),

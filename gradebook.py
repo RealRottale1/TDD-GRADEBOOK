@@ -1,4 +1,6 @@
 def letterGrade(score):
+    if not (type(score) is int):
+        raise TypeError
     if (score > 89):
         return "A"
     elif (score > 79):
