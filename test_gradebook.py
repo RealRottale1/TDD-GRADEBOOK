@@ -42,6 +42,10 @@ def test_average_invalidType():
     with pytest.raises(TypeError):
         average(92)
 
+def test_average_invalidItems():
+    with pytest.raises(TypeError):
+        average([92, "92", 92])
+
 @pytest.mark.parametrize("score, bonus, expected", [
     (90, 11, 100),
     (0, 101, 100),
